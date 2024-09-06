@@ -13,7 +13,7 @@
   "description": "Fast & Green Theme Based on Astro + Static CMS. A Universe of Possibilities: Blogs, Portfolios, Menus, Webshop & Beyond",
   "scripts": {
     "postbuild": "pagefind --site dist --output-path dist/_pagefind",
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

@@ -71,7 +71,7 @@ function showRandomImage() {
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 650);  // Dar tiempo para reiniciar la transición
+    }, 400);  // Dar tiempo para reiniciar la transición
 
     // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
     const randomInterval = getRandomInterval(2000, 5000);
@@ -100,7 +100,7 @@ document.addEventListener('visibilitychange', () => {
    width: 100%;
    height: auto;
    opacity: 0;
-   transition: opacity 1.4s ease-in-out;
+   transition: opacity 1.2s ease-in-out;
   }
   #item img.show {
     opacity: 0.4;
