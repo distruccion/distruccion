@@ -35,7 +35,7 @@ const { slug } = Astro.params;
           attributes={{
             picture: {
               class: "sm:h-screen",
-              style: `opacity: ${style.hero_image_opacity || 0.7}`,
+              style: `opacity: ${style.hero_image_opacity || 0.6}`,
             },
           }}
           src={thumbnail}
@@ -68,7 +68,7 @@ const { slug } = Astro.params;
   }
 
   <div
-    class="absolute inset-0 z-10 grid place-items-center bg-dark bg-opacity-20"
+    class="absolute inset-0 grid place-items-center bg-dark bg-opacity-20"
   >
     <div class="container-xl py-8">
       <div class="max-w-3xl">
@@ -79,10 +79,13 @@ const { slug } = Astro.params;
             </span>
           )
         }
-        <h1 class="title">
+        <h2 class="title">
           {title}
-        </h1>
-        {intro && <div class="subtitle balance py2"> {intro}</div>}
+        </h2>
+        <div class="flex-col">
+          {intro && <div class="subtitle balance py2 text-light mt-8"> {intro}</div>}
+        </div>
+        
 
         {
           tag && (

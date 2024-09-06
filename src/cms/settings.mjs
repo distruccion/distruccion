@@ -328,7 +328,7 @@ export const settings = {
           label: t("footer_menus"),
           widget: "list",
           collapsed: true,
-          reuired: false,
+          required: false,
           fields: [
             { name: "label", label: t("label"), widget: "string" },
             {

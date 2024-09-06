@@ -2,7 +2,7 @@
   <button
     :aria-label="show ? translations.close : translations.menu"
     @click="toggleMenu()"
-    :class="` nav-mobile-btn relative  ml-auto flex  text-primary md:hidden ${
+    :class="` nav-mobile-btn relative  ml-auto flex  text-secondary md:hidden ${
       show ? 'bg-transparent ' : ''
     }`"
   >
@@ -12,11 +12,11 @@
   </button>
   <transition name="nested">
     <div
-      class="surface-menu nav-mobile fixed inset-0 grid h-full auto-rows-min place-items-center gap-4 px-4 pt-4"
+      class="surface-menu-mob nav-mobile fixed inset-0 grid h-full auto-rows-min place-items-center gap-4 px-4 pt-4"
       v-show="show"
     >
       <div class="mx-auto max-w-[12rem] pt-10">
-        <slot name="logo" />
+        <a href="/"><slot name="logo" /></a>
       </div>
       <slot name="links" />
       <slot name="social" />

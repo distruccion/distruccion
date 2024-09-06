@@ -17,6 +17,7 @@ const {
   page_type,
   post_tag,
   portfolio_tag,
+  servicios_tag,
   animate,
 } = Astro.props;
 
@@ -53,6 +54,19 @@ if (page_type === "project") {
       (post) =>
         post.data?.tag &&
         portfolio_tag.some((t) => post.data?.tag && post.data.tag.includes(t)),
+    );
+}
+
+if (page_type === "servicios") {
+  base_url = import.meta.env.SERVICIOS_SLUG;
+  posts = (await getCollection("servicios")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+  if (servicios_tag && servicios_tag.length > 0)
+    posts = posts.filter(
+      (post) =>
+        post.data?.tag &&
+        servicios_tag.some((t) => post.data?.tag && post.data.tag.includes(t)),
     );
 }
 

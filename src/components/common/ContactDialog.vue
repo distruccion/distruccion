@@ -36,7 +36,7 @@
                     @click="showPopper = !showPopper"
                     class="select surface-overlay w-full text-left"
                   >
-                    {{ !!topic ? topic : "Select" }}
+                    {{ !!topic ? topic : "Elige un tema" }}
                   </button>
 
                   <template #content>
@@ -65,7 +65,7 @@
 
                 <label
                   class="peer-placeholder-shown:left-4 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:text-primary"
-                  >{{ t("topic") }} *</label
+                  >{{ t("tema") }} *</label
                 >
               </div>
               <div class="input-group">
@@ -78,7 +78,7 @@
                 />
                 <label
                   class="peer-placeholder-shown:left-4 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:text-primary"
-                  >{{ t("name") }} *</label
+                  >{{ t("nombre") }} *</label
                 >
               </div>
 
@@ -92,7 +92,7 @@
                 />
                 <label
                   class="peer-placeholder-shown:left-4 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:text-primary"
-                  >{{ t("email") }} *</label
+                  >{{ t("correo") }} *</label
                 >
               </div>
               <div class="input-group">
@@ -105,7 +105,7 @@
                 />
                 <label
                   class="peer-placeholder-shown:left-4 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:text-primary"
-                  >{{ t("phone") }}</label
+                  >{{ t("teléfono") }} *</label
                 >
               </div>
               <div class="input-group">
@@ -121,7 +121,7 @@
                 ></textarea>
                 <label
                   class="peer-placeholder-shown:left-4 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-9 peer-focus:scale-75 peer-focus:text-primary"
-                  >Message *</label
+                  >mensage *</label
                 >
               </div>
               <div
@@ -182,6 +182,12 @@ const rules = {
   email: [
     {
       type: "email",
+      required: true,
+    },
+  ],
+  phone: [
+    {
+      type: "string",
       required: true,
     },
   ],

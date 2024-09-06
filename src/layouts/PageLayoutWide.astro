@@ -3,6 +3,9 @@ import Block from "@components/block/Block.astro";
 import BaseLayout from "./BaseLayout.astro";
 import HeroImage from "@components/hero/HeroImage.astro";
 import HeroPlain from "@components/hero/HeroPlain.astro";
+import HeroImageRand from "@components/hero/HeroImageRand.astro";
+import HeroPlainServ from "@components/hero/HeroPlainServ.astro";
+import HeroPlainWork from "@components/hero/HeroPlainWork.astro";
 
 const props = Astro.props;
 const { title, description, blocks, style, thumbnail, og_image } = Astro.props;
@@ -24,6 +27,20 @@ const hasBlocks = blocks && blocks.length > 0;
       </HeroPlain>
     )
   }
+   {
+    style.hero_template == "plainServ" && (
+      <HeroPlainServ {...props}>
+        <slot name="hero" />
+      </HeroPlainServ>
+    )
+  } 
+   {
+    style.hero_template == "plainWork" && (
+      <HeroPlainWork {...props}>
+        <slot name="hero" />
+      </HeroPlainWork>
+    )
+  } 
   {
     style.hero_template == "image" && (
       <HeroImage {...props}>
@@ -31,6 +48,14 @@ const hasBlocks = blocks && blocks.length > 0;
       </HeroImage>
     )
   }
+  {
+    style.hero_template == "imageRand" && (
+      <HeroImageRand {...props}>
+        <slot name="hero" />
+      </HeroImageRand>
+    )
+  }
+
 
   <div class="relative z-10 w-full" id="more">
     <div

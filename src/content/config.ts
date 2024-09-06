@@ -1,5 +1,6 @@
-import { defineCollection, reference, z } from 'astro:content'
+import { defineCollection, reference, z} from 'astro:content'
 import { getIconName } from '@util/helpers'
+// import { optional } from 'astro/zod'
  
 
 const blocks = z
@@ -90,9 +91,6 @@ const blocks = z
 					})
 				).optional(),
 				
-
-
-
 			})).optional(),	
 				
 
@@ -168,6 +166,66 @@ const blog = defineCollection({
 })
 
 const project = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		intro: z.string().optional(),
+		thumbnail: z.string(),
+		og_image: z.string().optional(),
+		tag: z.array(z.string()).optional(),
+		features: z
+			.array(
+				z.object({
+					name: z.string(),
+					value: z.string()
+				})
+			)
+			.optional(),
+		hero_buttons: z
+			.array(
+				z.object({
+					href: z.string(),
+					className: z.string().optional(),
+					label: z.string(),
+					color: z.string().optional(),
+					icon: z.string().transform((val) => getIconName(val)).optional(),
+					icon_only: z.boolean().optional()
+				})
+			)
+			.optional(),
+		date: z
+			.string()
+			.or(z.date())
+			.transform((val) => new Date(val)),
+
+		style: style,
+		blocks: blocks,
+		nav: z
+			.object({
+				next: z
+					.array(
+						z.object({
+							href: z.string(),
+							label: z.string()
+						})
+					)
+					.optional(),
+
+				prev: z
+					.array(
+						z.object({
+							href: z.string(),
+							label: z.string()
+						})
+					)
+					.optional()
+			})
+			.optional()
+	})
+})
+
+const servicios = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
@@ -448,7 +506,7 @@ const page = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		intro: z.string().optional(),
-		thumbnail: z.string(),
+		thumbnail: z.string().optional(),
 		og_image: z.string().optional(),
 		template: z.string().optional(),
 		container: z.string().optional(),
@@ -487,10 +545,13 @@ const config = defineCollection({
 		intro: z.string().optional(),
 		thumbnail: z.string().optional(),
 		og_image: z.string().optional(),
+		template: z.string().optional(),
 		surface: z.array(z.object({
 				name: z.string(),
 				class: z.string()
 			})).optional(),
+		hero_template: z.string().optional(),
+
 		hero_buttons: z
 			.array(
 				z.object({
@@ -502,7 +563,7 @@ const config = defineCollection({
 					icon_only: z.boolean().optional()
 				})
 			)
-			.optional(),
+			.optional(),		
 
 		team: z
 			.array(
@@ -578,6 +639,32 @@ const config = defineCollection({
 			)
 			.optional(),
 
+		servicios_tags: z
+			.array(
+				z.object({
+					title: z.string(),
+					name: z.string(),
+					description: z.string(),
+					thumbnail: z.string(),
+					intro: z.string().optional(),
+					body: z.string().optional(),		
+					overwrite_style:z.boolean().optional(),
+					hero_buttons: z
+						.array(
+							z.object({
+							    href: z.string(),
+								className: z.string().optional(),
+								label: z.string(),
+								color: z.string().optional(),
+								icon: z.string().transform((val) => getIconName(val)).optional(),
+								icon_only: z.boolean().optional()
+							})
+						)
+						.optional()
+				})
+			)
+			.optional(),
+
 		product_categories: z
 			.array(
 				z.object({
@@ -607,6 +694,8 @@ const config = defineCollection({
 
 		style: style.optional(),
 
+		blocks: blocks,
+
 		main_menu: z
 			.array(
 				z.object({
@@ -635,6 +724,7 @@ const config = defineCollection({
 				z.object({
 					href: z.string(),
 					label: z.string(),
+					title: z.string().optional(),
 					icon: z.string().transform((val) => getIconName(val)),
 				})
 			)
@@ -642,4 +732,4 @@ const config = defineCollection({
 	})
 })
 
-export const collections = { blog, page, menu, project, product, config }
+export const collections = { blog, page, menu, project, product, config, servicios }

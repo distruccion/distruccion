@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 
 @layer base {
   :root {
-    --color-primary: 75 38 143; /* 135 94 212 */
-    --color-secondary: 107 154 199;
+    --color-primary: 60 60 158; /* 135 94 212 */
+    --color-secondary: 158 158 255;
     --color-accent: 119 112 150;
-    --color-warning: 202 121 45;
-    --color-danger: 180 25 14;
-    --color-success: 77 137 101;
-    --color-dark: 25 28 38;
+    --color-warning: 213 167 0;
+    --color-danger: 245 85 100;
+    --color-success: 124 191 56;
+    --color-dark: 45 45 45;
     --color-light: 243 241 239;
-    --color-info: 25 28 38;
+    --color-info: 45 45 45;
 
     --spacing: 1rem;
     --w-xl: 75rem;
@@ -31,15 +33,15 @@
 
   [data-theme="dark"] {
     body {
-      --color-primary: 135 94 212;
-      --color-secondary: 107 154 199;
+      --color-primary: 65 65 163;
+      --color-secondary: 158 158 255;
       --color-accent: 119 112 150;
-      --color-warning: 202 121 45;
-      --color-danger: 180 25 14;
-      --color-success: 77 137 101;
-      --color-dark: 25 28 38;
-      --color-light: 243 241 239;
-      --color-info: 25 28 38;
+      --color-warning: 213 167 0;
+      --color-danger: 245 85 100;
+      --color-success: 124 191 56;
+      --color-dark: 25 25 25;
+      --color-light: 245 235 233;
+      --color-info: 65 65 65;
     }
   }
 }
@@ -56,11 +58,11 @@ body {
 }
 
 .surface-base {
-  @apply bg-light text-dark dark:bg-dark dark:text-light;
+  @apply bg-light text-gray-700 dark:bg-dark dark:text-gray-300;
 }
 
 .surface-primary {
-  @apply bg-primary text-white dark:text-white;
+  @apply bg-primary text-white dark:text-light;
   a:not([class]) {
     @apply text-light;
   }
@@ -85,7 +87,7 @@ body {
   }
 }
 .surface-danger {
-  @apply bg-danger text-light;
+  @apply bg-danger text-light text-gray-800;
   a:not([class]) {
     @apply text-light;
   }
@@ -105,11 +107,18 @@ body {
 }
 
 .surface-footer {
-  @apply bg-dark bg-opacity-80 text-light;
+  @apply bg-stone-800 bg-opacity-80 text-light;
 }
 
 .surface-menu {
-  @apply bg-light bg-opacity-90 text-primary  dark:bg-dark dark:bg-opacity-90;
+  @apply bg-light bg-opacity-90 text-primary  dark:bg-stone-800 dark:bg-opacity-90;
+  .nav-links {
+    @apply text-dark dark:text-stone-100;
+  }
+}
+
+.surface-menu-mob {
+  @apply bg-light bg-opacity-100 text-primary  dark:bg-dark dark:bg-opacity-100;
   .nav-links {
     @apply text-dark dark:text-white;
   }
@@ -130,10 +139,23 @@ body {
     @apply text-light;
   }
 }
+.surface-att {
+  @apply bg-teal-400 text-neutral-700 dark:bg-orange-100;
+  a:not([class]) {
+    @apply text-light;
+  }
+}
+
+.surface-fticons {
+  @apply bg-stone-700 text-orange-100 dark:text-red-100 dark:bg-stone-900;
+  a:not([class]) {
+    @apply text-light;
+  }
+}
 
 @font-face {
-  font-family: "Adjusted Arial Fallback";
-  src: local(Arial);
+  font-family: "Poppins";
+  src: local(Poppins);
   size-adjust: 105%;
   ascent-override: normal;
   descent-override: normal;
@@ -145,7 +167,7 @@ body {
   @screen xs {
     --spacing: 2rem;
   }
-  font-family: "Inter Tight Variable", "Adjusted Arial Fallback", "arial",
+  font-family: "Poppins", "arial",
     sans-serif;
   --container-spacing: calc(var(--spacing) * 2);
   --grid-spacing: calc(var(--spacing) / 2);
@@ -258,11 +280,11 @@ body {
   }
 
   p {
-    @apply text-lg;
+    @apply text-base tracking-wide dark:font-light;
   }
   &:not(.no-lead) {
     p:first-of-type {
-      @apply text-xl;
+      @apply text-lg;
     }
   }
 
@@ -271,7 +293,7 @@ body {
   }
 
   h2 {
-    @apply text-3xl font-extrabold sm:text-4xl;
+    @apply text-2xl font-semibold sm:text-3xl;
     text-wrap: balance;
     strong {
       @apply block text-xs font-light uppercase tracking-widest;
@@ -279,20 +301,20 @@ body {
   }
 
   h3 {
-    @apply text-2xl font-extrabold sm:text-3xl;
+    @apply text-xl font-semibold sm:text-2xl;
     text-wrap: balance;
   }
   h4 {
-    @apply text-xl font-bold sm:text-2xl;
+    @apply text-lg font-semibold sm:text-xl;
     text-wrap: balance;
   }
   h5 {
-    @apply text-lg font-bold leading-none sm:text-xl;
+    @apply text-base font-semibold leading-none sm:text-lg;
     text-wrap: balance;
   }
 
   h6 {
-    @apply text-lg font-bold leading-none;
+    @apply text-lg font-semibold leading-none;
     text-wrap: balance;
   }
   p {
@@ -343,21 +365,21 @@ body {
 /* TYPOGRAFY */
 
 .title {
-  @apply text-4xl font-extrabold sm:text-6xl md:text-5xl lg:text-7xl;
+  @apply text-3xl font-semibold sm:text-5xl md:text-4xl lg:text-6xl;
   text-wrap: balance;
 
   &-md {
-    @apply text-2xl font-extrabold sm:text-4xl md:text-5xl lg:text-5xl;
+    @apply text-xl font-semibold sm:text-3xl md:text-4xl lg:text-4xl;
     text-wrap: balance;
   }
   &-sm {
-    @apply text-3xl font-extrabold sm:text-4xl;
+    @apply text-2xl font-semibold sm:text-3xl;
     text-wrap: balance;
   }
 }
 
 .subtitle {
-  @apply text-2xl;
+  @apply text-xl font-light;
 }
 
 .text-overline {
@@ -375,7 +397,7 @@ body {
 /* BUTTONS */
 
 .btn {
-  @apply inline-flex gap-2 rounded-full px-4 py-2 uppercase outline-offset-4 transition-all duration-300 hover:-translate-y-0.5  hover:bg-opacity-90 hover:shadow-md disabled:pointer-events-none disabled:opacity-50 disabled:grayscale;
+  @apply inline-flex gap-2 rounded-none px-4 py-2 uppercase outline-offset-4 transition-all duration-300 hover:-translate-y-0.5  hover:bg-opacity-90 hover:shadow-md disabled:pointer-events-none disabled:opacity-50 disabled:grayscale;
 
   &-icon {
     @apply px-2;

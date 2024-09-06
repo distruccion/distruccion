@@ -8,7 +8,7 @@
       type="email"
       :placeholder="t('email')"
       v-model="form.email"
-      class="relative block overflow-hidden rounded-full bg-dark px-5 py-2"
+      class="relative block overflow-hidden rounded-full bg-dark px-4 py-2 max-w-60"
       :class="errorFields?.email?.length ? 'text-warning' : 'text-light'"
     />
     <button

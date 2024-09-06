@@ -21,9 +21,12 @@ const isActive = (href) => {
     <a
       href="/"
       aria-label={title}
-      class="grid place-items-center py-3 text-primary"
-      ><Icon name="logo" class="h-6" /></a
+      class="inline-block place-items-center py-3 text-primary"
+      data-astro-reload
     >
+      <Icon name="logo" class="w-full h-11 dark:hidden z-10" />
+      <Icon name="logoDark" class="w-full h-0 invisible dark:visible z-0 static dark:h-11" />
+    </a>
     {
       menu && (
         <ul class="nav-underline nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex ">
@@ -56,7 +59,7 @@ const isActive = (href) => {
           </li>
 
           {social &&
-            social.slice(0, 3).map((link) => (
+            social.slice(0, 0).map((link) => (
               <li class="hidden md:block">
                 <a
                   href={link.href}
@@ -78,12 +81,13 @@ const isActive = (href) => {
               client:idle
               translations={{ menu: t("menu"), close: t("close") }}
             >
-              <Icon name="menu-solid" class="h-10 w-10" slot="menu" />
+              <Icon name="menu-solid" class="mt-2 h-8 w-8 text-gray-500" slot="menu" />
+              <Icon name="close" class="mt-2 h-8 w-8 text-red-700" slot="close" />
 
-              <Icon name="close" class="h-10 w-10" slot="close" />
-              <Icon name="logo" class="w-full" slot="logo" />
+              {/* <Icon name="logo" class="w-full h-11 dark:hidden" slot="logo" />
+              <Icon name="logoDark" class="w-full h-0 invisible dark:visible dark:h-11" slot="logo" /> */}
               <ul
-                class="mobile-links nav-links mt-3 w-full text-center"
+                class="mobile-links nav-links mt-3 w-full text-center "
                 slot="links"
               >
                 {menu.map((link, index) => (
@@ -95,7 +99,7 @@ const isActive = (href) => {
                         : ""
                     }`}
                   >
-                    <a href={link.href} class={`block py-3`}>
+                    <a href={link.href} class={`block py-3 font-normal text-lg`}>
                       {link.label}
                     </a>
                   </li>
@@ -103,7 +107,7 @@ const isActive = (href) => {
               </ul>
 
               <ul
-                class="relatives flex w-full flex-wrap justify-center gap-2 py-4"
+                class="relatives flex w-full flex-wrap justify-center gap-4 py-4 text-neutral-500"
                 slot="social"
               >
                 {social.map((link, index) => (
@@ -117,7 +121,7 @@ const isActive = (href) => {
                       target="_blank"
                       aria-label={link.label}
                     >
-                      <Icon name={link.icon} class="h-8 w-8" />
+                      <Icon name={link.icon} class="h-6 w-6 " />
                     </a>
                   </li>
                 ))}

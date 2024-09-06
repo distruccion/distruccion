@@ -1,0 +1,123 @@
+---
+
+---
+
+<div class="media parallax h-full w-full" id="item" transition:persist><img class="" src=""></div>
+
+<script>
+
+const images = [
+  '../../../imgGrid/grid0.webp',
+  '../../../imgGrid/grid1.webp',
+  '../../../imgGrid/grid2.webp',
+  '../../../imgGrid/grid3.webp',
+  '../../../imgGrid/grid4.webp',
+  '../../../imgGrid/grid5.webp',
+  '../../../imgGrid/grid6.webp',
+  '../../../imgGrid/grid7.webp',
+  '../../../imgGrid/grid8.webp',
+  '../../../imgGrid/grid9.webp',
+  '../../../imgGrid/grid10.webp',
+  '../../../imgGrid/grid11.webp',
+  '../../../imgGrid/grid12.webp',
+  '../../../imgGrid/grid13.webp',
+  '../../../imgGrid/grid14.webp',
+  '../../../imgGrid/grid15.webp',
+  '../../../imgGrid/grid16.webp',
+  '../../../imgGrid/grid17.webp',
+  '../../../imgGrid/grid18.webp',
+  '../../../imgGrid/grid19.webp',
+  '../../../imgGrid/grid20.webp',
+  '../../../imgGrid/grid21.webp',
+  '../../../imgGrid/grid22.webp',
+  '../../../imgGrid/grid23.webp',
+  '../../../imgGrid/grid24.webp',
+  '../../../imgGrid/grid25.webp',
+  '../../../imgGrid/grid26.webp',
+  '../../../imgGrid/grid27.webp',
+  '../../../imgGrid/grid28.webp',
+  '../../../imgGrid/grid29.webp',
+  '../../../imgGrid/grid30.webp',
+  '../../../imgGrid/grid31.webp',
+  '../../../imgGrid/grid32.webp',
+  '../../../imgGrid/grid33.webp',
+  '../../../imgGrid/grid34.webp',
+  '../../../imgGrid/grid35.webp',
+    // Añade más imágenes según sea necesario
+];
+
+function getRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return images[randomIndex];
+}
+
+function getRandomInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function showRandomImage() {
+    const imgElement = document.getElementById('item');
+    const randomImage = getRandomImage();
+
+    // Asegúrate de que 'item' tenga un contenido IMG
+    if (!imgElement.querySelector('img')) {
+        const img = document.createElement('img');
+        imgElement.appendChild(img);
+    }
+    
+    const img = imgElement.querySelector('img');
+    img.classList.remove('show');  // Quitar clase para reiniciar la transición
+
+    setTimeout(() => {
+        img.src = randomImage;
+        img.classList.add('show');  // Añadir clase para iniciar la transición
+    }, 650);  // Dar tiempo para reiniciar la transición
+
+    // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
+    const randomInterval = getRandomInterval(2000, 5000);
+    setTimeout(showRandomImage, randomInterval);
+}
+
+// Iniciar el proceso de mostrar imágenes aleatorias
+document.addEventListener('DOMContentLoaded', showRandomImage);
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        // Recargar la página cuando vuelva a ser visible
+        location.reload();
+    }
+});
+
+</script>
+
+<style>
+  #item {
+      width: 100%;
+      height: auto;
+      max-height: calc(100svh - 4rem);
+  }
+  #item img {
+   width: 100%;
+   height: auto;
+   opacity: 0;
+   transition: opacity 1.3s ease-in-out;
+  }
+  #item img.show {
+    opacity: 0.4;
+  }
+  @media screen and (max-width: 960px) {
+  #item {
+      width: calc(100svh - 4rem);
+      height: auto;
+      min-height: calc(100svh - 4rem);
+  }
+  @media screen and (min-width: 550px) {
+  #item {
+      width: 1080px;
+      height: auto;
+      max-height: calc(100svh - 4rem);
+  }
+  }
+  }
+</style>
+

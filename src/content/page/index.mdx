@@ -1,101 +1,125 @@
 ---
-title: Nebulix, a Fast & Green Theme Based on Astro + Static CMS
-description: "A Universe of Possibilities: Blogs, Portfolios, Restaurant Menus,
-  Online Store, and Beyond"
-intro: "A Universe of Possibilities: Blogs, Portfolios, Restaurant Menus, Online
-  Store, and Beyond"
-hero_template: image
+title: "distrucción:"
+description: "Diseño y Construcción Integral - Arquitectura en Convergencia."
+intro: "Sueña, nosotros lo construimos"
+hero_template: imageRand
 template: full
 container: md
 hero_buttons:
   - component: Link
-    label: Learn More
+    label: agenda una cita
+    href: https://wa.me/3112049659
+    class: optional
+    color: surface-att
+    icon_only: false
+    icon: /src/icons/calendar-heart.svg
+  - component: Link
+    label: Conoce más
     href: "#more"
     class: surface-primary
     icon_only: false
     icon: /src/icons/down-line.svg
-    color: surface-primary
-  - component: Link
-    label: docs
-    href: /blog/tag/docs
-    class: optional
-    icon_only: false
-    icon: /src/icons/page.svg
-pubDate: Jul 08 2022
+    color: surface-info
+pubDate: sep 08 2024
 layout-hidden: blog
+
 blocks:
+
+  - type: text_image
+    component: TextImage
+    container: md
+    template: column
+    title: My Image
+    image_size: "50"
+    reverse: true
+    animate: false
+    block_class: ""
+    thumbnail: /src/assets/bg1.png
+    content: >
+        ## **¿Qué te ofrecemos?** Arquitectura y construcción en modo fácil
+        
+        Piensa en nosotros como una interfaz amigable de usuario. Tú sólo tendrás que seleccionar algunas opciones, nosotros nos encargamos de toda la complejidad que sucede por detrás para entregarte el espacio que deseas y amarás: a la medida de tus necesidades, con una calidad que supere tus expectativas.
+
   - type: features
     component: Features
     container: lg
     block_class: " py-20 text-center"
     features:
       - content: >
-          ### Tailwind CSS
+          ### Compromiso
 
+          Tenemos muy claro la importancia de tu patrimonio. Seas una empresa o una persona, sea tu presupuesto grande o pequeño; su importancia es una constante. Nuestro compromiso debe ser una respuesta proporcional.
 
-          Transform your template's appearance with the beloved Tailwind CSS framework. Easily customize your design, bringing your unique vision to life.
+        icon: /src/icons/thumb-up-outline.svg
+        color: surface-fticons
+
+      - content: >
+          ### Empatía
+
+             Sabemos que, salvo que te dediques a ello, construir no es algo cotidiano. Entendemos que esto y la relevancia de la inversión pueden causarte incertidumbre. Nos ponemos en tu lugar buscando hacerte sentir en confianza.
+
         icon: /src/icons/tailwind.svg
-        color: bg-[#38bdf8] text-white
-      - color: bg-[#fc0] text-black
+        color: surface-fticons
+
+      - color: surface-fticons
         icon: /src/icons/shop.svg
         content: >
-          ### Webshop
+          ### Investigación exhaustiva
 
 
-          Experience a straightforward webshop, powered by SnapCart. It seamlessly handles product variations and even accommodates digital products.
+          Cada proyecto es único, es primordial conocer y entender sus particularidades. Recopilamos y articulamos toda la información relevante que será la base de un proyecto exitoso.
       - icon: /src/icons/blocks-group-solid.svg
         content: >
-          ### Page Block Builder
+          ### Diagnóstico preciso
 
 
-          Craft your perfect page effortlessly with our selection of versatile blocks. Customize and extend your page exactly the way you want it.
-        color: surface-secondary
+          Es primordial definir cuáles son las preguntas que se busca responder. Escuchando tus necesidades, conociendo las restricciones, acotamos un espacio de actuación.
+        color: surface-fticons
         href: ""
       - content: >
-          ### Full-Text Search
+          ### Diseñado para ti
 
 
-          Experience lightning-fast full-text search capabilities with Pagefind. Our integrated search engine seamlessly enhances your site's user experience.
+          Desarrollamos en respuesta un diseño a tu medida, que es coherente con lo posible y no contradice ningún tipo de restricción (estética, económica, funcional, legal, de confort, etc.).
         icon: /src/icons/book-search-24-regular.svg
-        color: surface-accent
+        color: surface-fticons
       - icon: /src/icons/template.svg
         content: >
-          ### Multiple Templates
+          ### Gestión documental
 
 
-          Tailor your website to perfection with a variety of templates for pages, blogs, shops, portfolios, and menus. Craft each page precisely as you envision.
-        color: surface-success
+          Por supuesto, nos hacemos cargo de generar y tramitar toda la documentación necesaria, dentro del marco legal y normativo pertinente.
+        color: surface-fticons
         href: ""
       - icon: /src/icons/menu.svg
         content: >
-          ### Restaurant Menu
+          ### Ejecución de obra
 
 
-          Explore our user-friendly menu, thoughtfully designed with clear labels and detailed information about allergens for your dining peace of mind.
-        color: surface-warning
+          Y claro, realizamos tu obra, coordinando todas las disciplinas y supervisando todos los trabajos para que el proyecto cumpla con especificaciones, calidad y tiempos de entrega.
+        color: surface-fticons
         href: ""
       - href: "#"
         icon: /src/icons/git.svg
         content: >
-          ### Git-Based
+          ### Entrega de obra
 
 
           With Astro + Static CMS, your content finds its home in a Git repository, ensuring efficient content management and collaboration.
-        color: surface-primary
+        color: surface-fticons
       - content: >
-          ### Light & Darkmode
+          ### Seguimiento
 
 
           Give your visitors the freedom to choose their preferred color scheme, ensuring a personalized browsing experience.
-        color: surface-dark
+        color: surface-fticons
         icon: /src/icons/dark-theme-20-filled.svg
     content: |+
-      ## Nebulix Features
+      ## ... de qué estamos hablando?
+
+    surface: bg-stone-200 text-primary dark:bg-neutral-800 dark:text-orange-100
 
 
-
-
-    surface: bg-slate-200 text-dark dark:bg-slate-900 dark:text-white
   - type: text_image
     component: TextImage
     container: md
@@ -109,22 +133,51 @@ blocks:
     content: >
       ## **A perfect page speed score** Optimized Speed and Accessibility
 
-
       Our perfect 100% page speed score and compliance with WCAG 2.1 AA standards reflect our commitment. We've optimized speed and accessibility, ensuring a superior user experience for all.
+
+
+  - type: recentitems
+    component: RecentItems
+    page_type: servicios
+    count: 5
+    container: md
+    template: grid
+    animate: false
+    surface: bg-stone-200 text-primary dark:bg-neutral-800 dark:text-orange-100
+    post_tag:
+      - Docs
+    title: Nuestros Servicios
+    content: "\n\n\n"
+
+  - type: rich_text
+    component: RichText
+    container: sm
+    content: >
+    
+      ## **¿Quieres algo más concreto?** Echa un vistaso a nuestro trabajo
+
+      Need to show your skills, select a good template and build your portfolio with nebulix.
+    buttons:
+      - icon_only: false
+        label: Porfolio
+        href: /work
+        color: surface-primary
+        icon: /src/icons/portfolio.svg
+    block_class: py-20 text-center
+
   - type: recentitems
     component: RecentItems
     page_type: blog
-    count: 3
+    count: 2
     container: md
     template: list
     animate: true
-    post_tag:
-      - Docs
-    title: Check out our documentation
-    surface: bg-slate-200 text-dark dark:bg-slate-800 dark:text-white
+    title: Visita nuestro Blog
+    surface: bg-neutral-200 text-dark dark:bg-neutral-900 dark:text-white
     content: >
-      Getting started is easy, just clone the repo, configure and you are ready
-      to go.
+      Encontrarás información relevante sobre diseño, arquitectura y construcción.
+
+
   - type: text_image
     component: TextImage
     container: none
@@ -132,14 +185,14 @@ blocks:
     title: My Image
     reverse: true
     content: >
-      ## Nebulix Webshop
 
+      ## Nebulix Webshop
 
       Discover the seamless integration of Snipcart, empowering you to efficiently oversee your store directly within a Static CMS. Whether your offerings include digital products or physical goods, Snipcart boasts a wealth of exceptional features, making it an ideal choice for the majority of small webshops. 
 
 
       Read more about [SnipCart](https://snipcart.com/).
-    thumbnail: /src/assets/nebulix_merch.jpeg
+    thumbnail: /src/assets/bg1.png
     buttons:
       - icon_only: false
         label: Demo Shop
@@ -150,21 +203,7 @@ blocks:
     image_size: ""
     animate: false
     block_class: my-0
-  - type: rich_text
-    component: RichText
-    container: sm
-    content: >
-      ## Nebulix Portfolio
 
-
-      Need to show your skills, select a good template and build your portfolio with nebulix.
-    buttons:
-      - icon_only: false
-        label: Portfolio Demo
-        href: /work
-        color: surface-primary
-        icon: /src/icons/portfolio.svg
-    block_class: py-20 text-center
   - type: text_image
     component: TextImage
     container: none
@@ -181,12 +220,6 @@ blocks:
       Create a great menu, you can even shop arlercic information and labels. All menu's are mobile friendly and fast!
 
 
-
-
-
-
-
-
     buttons:
       - icon_only: false
         label: Demo Menu
@@ -196,7 +229,7 @@ blocks:
         class_name: py-0
     block_class: my-0
 style:
-  hero_template: image
+  hero_template: imageRand
   template: full
   container: sm
   content_class: py-20 text-center
@@ -204,10 +237,6 @@ style:
   card_template: grid
   hero_surface: surface-dark
   hero_image_opacity: ""
-thumbnail: /src/assets/nemulala.jpg
 og_image: /src/assets/og_image_nebulix.png
+bkgImage: /src/assets/imgGrid/grid1.webp
 ---
-
-## Astro powered, fast by design.
-
-Experience web performance at its zenith with Nebulix, driven by the speed-centric Astro framework. Your site will load in the blink of an eye, delivering an unparalleled user experience. Say goodbye to sluggishness and embrace the rapidity of Nebula for your website.
