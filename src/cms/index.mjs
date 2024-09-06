@@ -3,6 +3,6 @@ import { page } from "./page.mjs";
 import { post } from "./post.mjs";
 import { menu } from "./menu.mjs";
 import { project } from "./project.mjs";
-import { product } from "./product.mjs";
+import { product } from "./servicios.mjs";
 
-export { settings, menu, page, post, project, product };
+export { settings, menu, page, post, project, product, servicios };
