@@ -22,8 +22,8 @@ module.exports = {
         'text-dark': '#454545',
       },
       fontFamily: {
-        sans: ["Poppins", "Helvetica", "Verdana", "sans-serif"],
-        body: ["Poppins", "Helvetica", "Verdana", "sans-serif"],
+        sans: ["Poppins", "Helvetica", "sans-serif"],
+        body: ["Poppins", "Helvetica", "sans-serif"],
         poppins: ["Poppins", "sans"],
       },
       boxShadow: {
