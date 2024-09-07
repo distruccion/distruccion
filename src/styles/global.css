@@ -241,7 +241,6 @@ body {
 }
 
 /* POPPER */
-
 .popper {
   transition: background 250ms ease-in-out;
   background: var(--popper-theme-background-color);
