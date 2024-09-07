@@ -4,7 +4,7 @@
       v-show="show"
       class="search-modal surface-dark search-scroll text-left"
     >
-      <div class="container-sm py-2">
+      <div class="container-sm py-0">
         <div id="search" ref="search"></div>
       </div>
       <div class="absolute right-0 top-0 inline-block">
