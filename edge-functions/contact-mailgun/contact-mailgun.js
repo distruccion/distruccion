@@ -14,14 +14,18 @@ export default async (request, context) => {
     !FROM_EMAIL_ADDRESS ||
     !TO_EMAIL_ADDRESS ||
     !MAILGUN_API_URL
-  )
+  ) {
     return Response.json({
       error: "Missing MailGun configuration, please check your .env file.",
     });
+  }
 
   const { email, name, message, topicEmail } = await request.json();
 
-  if (!email || email === "") return Response.json({ error: "Missing email" });
+  if (!email || email === "") {
+    return Response.json({ error: "Missing email" });
+  }
+
   const authHeader = "Basic " + encodeBase64(`api:${MAILGUN_API_KEY}`);
 
   const headers = {
@@ -39,6 +43,7 @@ export default async (request, context) => {
   payload.append("h:Reply-To", email);
   payload.append("subject", `Contact Form: ${name} ${email}`);
   payload.append("text", message);
+
   try {
     const resp = await fetch(
       `${MAILGUN_API_URL}/v3/${MAILGUN_DOMAIN}/messages`,
@@ -49,19 +54,39 @@ export default async (request, context) => {
       },
     );
 
-    let response = await resp.json();
+    // Verificar si la respuesta es JSON
+    const contentType = resp.headers.get("content-type");
+    let response;
+    
+    if (contentType && contentType.includes("application/json")) {
+      // Si es JSON, parsear
+      response = await resp.json();
+    } else {
+      // Si no es JSON, manejarlo como texto o HTML
+      response = await resp.text();
+    }
 
-    return Response.json({
-      statusCode: 200,
-      status: resp?.ok ? "ok" : "error",
-      body: "Your message was sent successfully! We'll be in touch.",
-    });
+    // Retornar respuesta basada en el resultado de Mailgun
+    if (resp.ok) {
+      return Response.json({
+        statusCode: 200,
+        status: "ok",
+        body: "Your message was sent successfully! We'll be in touch.",
+      });
+    } else {
+      console.log("Error response from Mailgun:", response);
+      return Response.json({
+        statusCode: resp.status,
+        status: "error",
+        error: response,
+      });
+    }
   } catch (e) {
     console.log("ERROR:", e);
     return Response.json({
       statusCode: 400,
       status: "error",
-      error: "Mailgun  error",
+      error: "Mailgun error: " + e.message,
     });
   }
 };
