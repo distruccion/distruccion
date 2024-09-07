@@ -29,7 +29,7 @@ const isActive = (href) => {
     </a>
     {
       menu && (
-        <ul class="nav-underline nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex ">
+        <ul class="nav-underline nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex dark:font-light">
           {menu.map((link) => (
             <li class={`${isActive(link.href) ? "active font-semibold" : ""}`}>
               <a href={link.href} class={`block py-3`}>
@@ -87,13 +87,13 @@ const isActive = (href) => {
               {/* <Icon name="logo" class="w-full h-11 dark:hidden" slot="logo" />
               <Icon name="logoDark" class="w-full h-0 invisible dark:visible dark:h-11" slot="logo" /> */}
               <ul
-                class="mobile-links nav-links mt-3 w-full text-center "
+                class="mobile-links nav-links mt-3 w-full text-center dark:font-light "
                 slot="links"
               >
                 {menu.map((link, index) => (
                   <li
                     style={`--animation-delay: ${(index + 1) * 100}ms`}
-                    class={`title-md inner w-full border-2 border-transparent transition-all duration-1000 hover:border-current  ${
+                    class={`title-md inner w-full border-2 border-transparent transition-all duration-1000 hover:border-current ${
                       isActive(link.href)
                         ? "active font-semibold text-primary"
                         : ""

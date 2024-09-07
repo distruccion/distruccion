@@ -1,4 +1,5 @@
 import { W } from 'dist/_astro/runtime-dom.esm-bundler.BYwImbqk';
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
@@ -22,8 +23,8 @@ module.exports = {
         'text-dark': '#454545',
       },
       fontFamily: {
-        sans: ["Poppins", "Helvetica", "sans-serif"],
-        body: ["Poppins", "Helvetica", "sans-serif"],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        body: ["Poppins", ...defaultTheme.fontFamily.sans],
         poppins: ["Poppins", "sans"],
       },
       boxShadow: {
