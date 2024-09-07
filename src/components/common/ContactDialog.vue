@@ -257,27 +257,37 @@ const submit = () => {
       body: JSON.stringify(mailData.value),
       headers: { "Content-Type": "application/json" },
     })
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.status === "ok") {
-          toast.success(t("contact_thanks"));
-          form.email = "";
-          form.name = "";
-          form.phone = "";
-          form.message = "";
-          input.value = "";
-          hide();
-        } else {
-          toast.error(t("contact_error"));
-        }
-      })
-      .catch((e) => {
-        console.log("error", e);
-        toast.error(t("contact_error"));
-      })
-      .finally(() => {
-        loading.value = false;
-      });
+      // .then((r) => r.json())
+      // .then((data) => {
+      //   if (data.status === "ok") {
+      //     toast.success(t("contact_thanks"));
+      //     form.email = "";
+      //     form.name = "";
+      //     form.phone = "";
+      //     form.message = "";
+      //     input.value = "";
+      //     hide();
+      //   } else {
+      //     toast.error(t("contact_error"));
+      //   }
+      // })
+      // .catch((e) => {
+      //   console.log("error", e);
+      //   toast.error(t("contact_error"));
+      // })
+      // .finally(() => {
+      //   loading.value = false;
+      // });
+    .then((response) => {
+    console.log(response); // Imprime la respuesta para inspección
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .catch((e) => {
+    console.error("Error", e);
+  });      
   }
 };
 

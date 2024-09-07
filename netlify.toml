@@ -6,7 +6,6 @@
   function = "subscribe-mailchimp"
   path = "/api/subscribe-mailchimp"
 
-
 [[edge_functions]]
   function = "contact-slack"
   path = "/api/contact-slack"
@@ -18,5 +17,3 @@
 [[edge_functions]]
   function = "contact-postmark"
   path = "/api/contact-postmark"
-
-
