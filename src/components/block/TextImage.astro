@@ -16,6 +16,7 @@ const {
   buttons,
   aspect,
   image_size,
+  image_opacity,
   animate,
 } = Astro.props;
 
@@ -93,7 +94,9 @@ const animation = `image_${animate ? imageName : Math.random()}`;
 
             {template === "banner" && (
               <Picture
-                attributes={{ picture: { class: "parallax" } }}
+                attributes={{ picture: { class: "parallax", 
+                style: `opacity: ${image_opacity || 1.0}`,             
+                } }}
                 src={thumbnail}
                 width={1920}
                 height={900}

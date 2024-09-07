@@ -24,6 +24,7 @@ const blocks = z
 			content: z.string().optional(),
 			block_class: z.string().optional(),
 			image_size: z.string().optional(),
+			image_opacity: z.string().optional(),
 			count: z.number().optional(),
 			aspect: z.number().or(z.string()).transform((val) => {
 				if (typeof val === 'string') return parseFloat(val)
@@ -407,99 +408,6 @@ const product = defineCollection({
 	})
 })
 
-const menu = defineCollection({
-	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		intro: z.string().optional(),
-		thumbnail: z.string(),
-		og_image: z.string().optional(),
-		date: z
-			.string()
-			.or(z.date())
-			.transform((val) => new Date(val)),
-		categories: z.array(
-			z.object({
-				title: z.string(),
-				intro: z.string().optional(),
-				menu_items: z.array(
-					z.object({
-						title: z.string(),
-						intro: z.string().optional(),
-						thumbnail: z.string().optional(),
-						price: z
-							.array(
-								z.object({
-									label: z.string().optional(),
-									price: z
-										.number()
-										.or(z.string())
-										.optional()
-										.transform((val) => {
-											if (typeof val === 'string') return parseFloat(val)
-											if (!!val && val > 0) return val
-											return 0.0
-										})
-								})
-							)
-							.optional(),
-
-						details: z
-							.object({
-								allergens: z.array(z.string()).optional().or(z.string()),
-								labels: z.array(z.string()).optional().or(z.string())
-							})
-							.optional()
-					})
-				)
-			})
-		),
-		style: z.object({
-			template: z.string().optional(),
-			hero_template: z.string().optional(),
-			container: z.string().optional(),
-			page_class: z.string().optional(),
-			content_class: z.string().optional(),
-			block_class: z.string().optional(),
-			hero_class: z.string().optional()
-		}),
-		hero_buttons: z
-			.array(
-				z.object({
-					href: z.string(),
-					className: z.string().optional(),
-					label: z.string(),
-					color: z.string().optional(),
-					icon: z.string().transform((val) => getIconName(val)).optional(),
-					icon_only: z.boolean().optional()
-				})
-			)
-			.optional(),
-		nav: z
-			.object({
-				next: z
-					.array(
-						z.object({
-							href: z.string(),
-							label: z.string()
-						})
-					)
-					.optional(),
-
-				prev: z
-					.array(
-						z.object({
-							href: z.string(),
-							label: z.string()
-						})
-					)
-					.optional()
-			})
-			.optional()
-	})
-})
-
 const page = defineCollection({
 	type: 'content',
 	schema: z.object({
@@ -732,4 +640,4 @@ const config = defineCollection({
 	})
 })
 
-export const collections = { blog, page, menu, project, product, config, servicios }
+export const collections = { blog, page, project, product, config, servicios }

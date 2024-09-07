@@ -1,6 +1,6 @@
 ---
 title: "distrucción:"
-description: "Diseño y Construcción Integral - Arquitectura en Convergencia."
+description: "Diseño y Construcción Integral - Arquitectura en Convergencia"
 intro: "Sueña, nosotros lo construimos"
 hero_template: imageRand
 template: full
@@ -149,21 +149,28 @@ blocks:
     title: Nuestros Servicios
     content: "\n\n\n"
 
-  - type: rich_text
-    component: RichText
-    container: sm
+  - type: text_imgage
+    component: TextImage
+    container: none
+    template: banner
+    title: distrucción
+    reverse: true
     content: >
     
       ## **¿Quieres algo más concreto?** Echa un vistaso a nuestro trabajo
 
       Need to show your skills, select a good template and build your portfolio with nebulix.
+    thumbnail: /src/assets/bg1.png
     buttons:
       - icon_only: false
         label: Porfolio
-        href: /work
+        href: /porfolio
         color: surface-primary
         icon: /src/icons/portfolio.svg
-    block_class: py-20 text-center
+    block_class: my-0
+    aspect: ""
+    image_size: ""
+    animate: true
 
   - type: recentitems
     component: RecentItems
@@ -178,56 +185,6 @@ blocks:
       Encontrarás información relevante sobre diseño, arquitectura y construcción.
 
 
-  - type: text_image
-    component: TextImage
-    container: none
-    template: banner
-    title: My Image
-    reverse: true
-    content: >
-
-      ## Nebulix Webshop
-
-      Discover the seamless integration of Snipcart, empowering you to efficiently oversee your store directly within a Static CMS. Whether your offerings include digital products or physical goods, Snipcart boasts a wealth of exceptional features, making it an ideal choice for the majority of small webshops. 
-
-
-      Read more about [SnipCart](https://snipcart.com/).
-    thumbnail: /src/assets/bg1.png
-    buttons:
-      - icon_only: false
-        label: Demo Shop
-        href: /shop
-        icon: /src/icons/shop.svg
-        color: surface-primary
-    aspect: ""
-    image_size: ""
-    animate: false
-    block_class: my-0
-
-  - type: text_image
-    component: TextImage
-    container: none
-    template: banner
-    image_size: ""
-    title: My Image
-    reverse: false
-    animate: false
-    thumbnail: /src/assets/cosmic_coctails_3.jpeg
-    content: >+
-      ## Nebulix Restaurant Menus
-
-
-      Create a great menu, you can even shop arlercic information and labels. All menu's are mobile friendly and fast!
-
-
-    buttons:
-      - icon_only: false
-        label: Demo Menu
-        color: surface-primary
-        icon: /src/icons/menu.svg
-        href: /menu/drinks
-        class_name: py-0
-    block_class: my-0
 style:
   hero_template: imageRand
   template: full

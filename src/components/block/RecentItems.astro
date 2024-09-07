@@ -37,13 +37,6 @@ if (page_type === "blog") {
     );
 }
 
-if (page_type === "menu") {
-  base_url = import.meta.env.MENU_SLUG;
-  posts = (await getCollection("menu")).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-  );
-}
-
 if (page_type === "project") {
   base_url = import.meta.env.PORTFOLIO_SLUG;
   posts = (await getCollection("project")).sort(
