@@ -242,10 +242,10 @@ const mailData = computed(() => {
     topicEmail: topicEmail.value,
     message: `
 Topic:  ${topic.value}\r\n
-Name: ${form.name}\r\n
-Phone: ${form.phone}\r\n
+Nombre: ${form.name}\r\n
+Teléfono: ${form.phone}\r\n
 Email: ${form.email}\r\n
-Message: \r\n${form.message}\r\n           `,
+Mensaje: \r\n${form.message}\r\n           `,
   };
 });
 
