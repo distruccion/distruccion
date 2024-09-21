@@ -7,42 +7,48 @@
 <script>
 
 const images = [
-  '../../../imgGrid/grid0.webp',
-  '../../../imgGrid/grid1.webp',
-  '../../../imgGrid/grid2.webp',
-  '../../../imgGrid/grid3.webp',
-  '../../../imgGrid/grid4.webp',
-  '../../../imgGrid/grid5.webp',
-  '../../../imgGrid/grid6.webp',
-  '../../../imgGrid/grid7.webp',
-  '../../../imgGrid/grid8.webp',
-  '../../../imgGrid/grid9.webp',
-  '../../../imgGrid/grid10.webp',
-  '../../../imgGrid/grid11.webp',
-  '../../../imgGrid/grid12.webp',
-  '../../../imgGrid/grid13.webp',
-  '../../../imgGrid/grid14.webp',
-  '../../../imgGrid/grid15.webp',
-  '../../../imgGrid/grid16.webp',
-  '../../../imgGrid/grid17.webp',
-  '../../../imgGrid/grid18.webp',
-  '../../../imgGrid/grid19.webp',
-  '../../../imgGrid/grid20.webp',
-  '../../../imgGrid/grid21.webp',
-  '../../../imgGrid/grid22.webp',
-  '../../../imgGrid/grid23.webp',
-  '../../../imgGrid/grid24.webp',
-  '../../../imgGrid/grid25.webp',
-  '../../../imgGrid/grid26.webp',
-  '../../../imgGrid/grid27.webp',
-  '../../../imgGrid/grid28.webp',
-  '../../../imgGrid/grid29.webp',
-  '../../../imgGrid/grid30.webp',
-  '../../../imgGrid/grid31.webp',
-  '../../../imgGrid/grid32.webp',
-  '../../../imgGrid/grid33.webp',
-  '../../../imgGrid/grid34.webp',
-  '../../../imgGrid/grid35.webp',
+  'imgGrid/grid0.webp',
+  'imgGrid/grid1.webp',
+  'imgGrid/grid2.webp',
+  'imgGrid/grid3.webp',
+  'imgGrid/grid4.webp',
+  'imgGrid/grid5.webp',
+  'imgGrid/grid6.webp',
+  'imgGrid/grid7.webp',
+  'imgGrid/grid8.webp',
+  'imgGrid/grid9.webp',
+  'imgGrid/grid10.webp',
+  'imgGrid/grid11.webp',
+  'imgGrid/grid12.webp',
+  'imgGrid/grid13.webp',
+  'imgGrid/grid14.webp',
+  'imgGrid/grid15.webp',
+  'imgGrid/grid16.webp',
+  'imgGrid/grid17.webp',
+  'imgGrid/grid18.webp',
+  'imgGrid/grid19.webp',
+  'imgGrid/grid20.webp',
+  'imgGrid/grid21.webp',
+  'imgGrid/grid22.webp',
+  'imgGrid/grid23.webp',
+  'imgGrid/grid24.webp',
+  'imgGrid/grid25.webp',
+  'imgGrid/grid26.webp',
+  'imgGrid/grid27.webp',
+  'imgGrid/grid28.webp',
+  'imgGrid/grid29.webp',
+  'imgGrid/grid30.webp',
+  'imgGrid/grid31.webp',
+  'imgGrid/grid32.webp',
+  'imgGrid/grid33.webp',
+  'imgGrid/grid34.webp',
+  'imgGrid/grid35.webp',
+  'imgGrid/grid36.webp',
+  'imgGrid/grid37.webp',
+  'imgGrid/grid38.webp',
+  'imgGrid/grid39.webp',
+  'imgGrid/grid40.webp',
+  'imgGrid/grid41.webp',
     // Añade más imágenes según sea necesario
 ];
 
@@ -71,7 +77,7 @@ function showRandomImage() {
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 400);  // Dar tiempo para reiniciar la transición
+    }, 500);  // Dar tiempo para reiniciar la transición
 
     // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
     const randomInterval = getRandomInterval(2000, 5000);
@@ -95,27 +101,42 @@ document.addEventListener('DOMContentLoaded', showRandomImage);
       width: 100%;
       height: auto;
       max-height: calc(100svh - 4rem);
+      margin-top: -350px;
   }
   #item img {
    width: 100%;
    height: auto;
    opacity: 0;
-   transition: opacity 1.4s ease-in-out;
+   transition: opacity 1.3s ease-in-out;
   }
   #item img.show {
     opacity: 0.4;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1550px) {
+  #item {
+      margin-top: -100px;
+      width: 105%;
+  }
+  }
+  @media screen and (max-width: 1450px) {
+  #item {
+      margin-top: -00px;
+  }
+  }
+  @media screen and (max-width: 993px) {
   #item {
       width: calc(100svh - 4rem);
       height: auto;
       min-height: calc(100svh - 4rem);
+      margin-top: 0px;
   }
-  @media screen and (min-width: 550px) {
+  @media screen and (min-width: 450px) {
   #item {
       width: 1080px;
       height: auto;
       max-height: calc(100svh - 4rem);
+      margin-top: 0px;
+      margin-left: -100px;
   }
   }
   }
