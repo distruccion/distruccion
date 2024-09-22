@@ -81,7 +81,7 @@ function showRandomImage() {
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 500);  // Dar tiempo para reiniciar la transición
+    }, 700);  // Dar tiempo para reiniciar la transición
 
 }
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', showRandomImage);
    width: 100%;
    height: auto;
    opacity: 0;
-   transition: opacity 0.5s ease-in-out;
+   transition: opacity 0.6s ease-in-out;
   }
   #item img.show {
     opacity: 0.4;
