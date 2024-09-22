@@ -24,12 +24,12 @@ const isActive = (href) => {
       class="inline-block place-items-center py-3 text-primary"
       data-astro-reload
     >
-      <Icon name="logo" class="w-full h-11 dark:hidden z-10" />
-      <Icon name="logoDark" class="w-full h-0 invisible dark:visible z-0 static dark:h-11" />
+      <Icon name="logo" class="w-full min-w-28 h-11 dark:hidden z-10" />
+      <Icon name="logoDark" class="w-full min-w-28 h-0 invisible dark:visible z-0 static dark:h-11" />
     </a>
     {
       menu && (
-        <ul class="nav-underline nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex dark:font-light">
+        <ul class="nav-underline text-[0.9rem] lg:text-base nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex dark:font-light">
           {menu.map((link) => (
             <li class={`${isActive(link.href) ? "active font-semibold" : ""}`}>
               <a href={link.href} class={`block py-3`}>
@@ -44,7 +44,7 @@ const isActive = (href) => {
     {
       (
         <ul class="nav-underline relative -mr-4  ml-auto flex flex-nowrap justify-end pl-4 uppercase md:mr-0">
-          <li>
+          {/* <li>
             <CartButton
               label={t("cart")}
               client:idle
@@ -53,7 +53,7 @@ const isActive = (href) => {
             >
               <Icon name="shopping-cart" class="h-6 w-6" />
             </CartButton>
-          </li>
+          </li> */}
           <li>
             <PageFind />
           </li>
