@@ -74,12 +74,12 @@ function showRandomImage() {
     const img = imgElement.querySelector('img');
     setTimeout(() => {
         img.classList.remove('show');  // Quitar clase para reiniciar la transición
-    }, 300);
+    }, 1700);
     
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 500);  // Dar tiempo para reiniciar la transición
+    }, 2000);  // Dar tiempo para reiniciar la transición
 
     // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
     const randomInterval = getRandomInterval(5500, 6000);
