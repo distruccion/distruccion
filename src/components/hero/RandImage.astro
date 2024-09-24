@@ -61,7 +61,7 @@ function getRandomInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function showRandomImage() {
+async function showRandomImage() {
     const imgElement = document.getElementById('item');
     const randomImage = getRandomImage();
 
@@ -71,16 +71,16 @@ function showRandomImage() {
         imgElement.appendChild(img);
     }
         
-    const img = imgElement.querySelector('img');
+    const img = await imgElement.querySelector('img');
     img.classList.remove('show');  // Quitar clase para reiniciar la transición
     
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 500);  // Dar tiempo para reiniciar la transición
+    }, 400);  // Dar tiempo para reiniciar la transición
 
     // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
-    const randomInterval = getRandomInterval(7000, 7000);
+    const randomInterval = getRandomInterval(5500, 6000);
     setTimeout(showRandomImage, randomInterval);    
 }
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', showRandomImage);
    width: 100%;
    height: auto;
    opacity: 0;
-   transition: opacity 0.25s ease-in-out;
+   transition: opacity 0.2s ease-in-out;
   }
   #item img.show {
     opacity: 0.6;
