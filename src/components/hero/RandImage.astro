@@ -70,10 +70,6 @@ function showRandomImage() {
         const img = document.createElement('img');
         imgElement.appendChild(img);
     }
-
-    // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
-    const randomInterval = getRandomInterval(4500, 5000);
-    setTimeout(showRandomImage, randomInterval);
         
     const img = imgElement.querySelector('img');
     img.classList.remove('show');  // Quitar clase para reiniciar la transición
@@ -81,8 +77,11 @@ function showRandomImage() {
     setTimeout(() => {
         img.src = randomImage;
         img.classList.add('show');  // Añadir clase para iniciar la transición
-    }, 700);  // Dar tiempo para reiniciar la transición
+    }, 1100);  // Dar tiempo para reiniciar la transición
 
+    // Cambiar imagen en un intervalo aleatorio entre 2 y 5 segundos
+    const randomInterval = getRandomInterval(4500, 5000);
+    setTimeout(showRandomImage, randomInterval);    
 }
 
 // Iniciar el proceso de mostrar imágenes aleatorias
@@ -108,7 +107,7 @@ document.addEventListener('DOMContentLoaded', showRandomImage);
    width: 100%;
    height: auto;
    opacity: 0;
-   transition: opacity 0.6s ease-in-out;
+   transition: opacity 0.2s ease-in-out;
   }
   #item img.show {
     opacity: 0.4;

@@ -89,6 +89,10 @@
   "name": "Nombre",
   "navigation": "Navegación",
   "next": "Siguiente",
+  "newsletter_already_subscribed": "Ya estás suscrito. Gracias por ser parte de nuestra comunidad!",
+  "newsletter_error": "No pudimos suscribirte. Por favos, inténtalo de nuevo.",
+  "newsletter_text": "Texto del formulario del boletín informativo",
+  "newsletter_thanks": "Gracias pro suscribite a nuestro boletín informativo. Revisa tu correo para confirmar tu suscripción.",
   "not_used_by_banner_template": "No utilizado por la plantilla de banner",
   "number_of_items": "Número de artículos",
   "offer": "Oferta",
@@ -146,5 +150,6 @@
   "weight": "Peso",
   "weight_in_grams": "Peso en gramos",
   "width": "Ancho",
-  "width_in_cm": "Ancho en cm"
+  "width_in_cm": "Ancho en cm",
+  "subscribe": "unirme"
 }
