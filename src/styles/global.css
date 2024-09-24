@@ -139,13 +139,13 @@ body {
   }
 }
 .surface-info {
-  @apply bg-info text-light;
+  @apply bg-neutral-800 text-light dark:bg-info;
   a:not([class]) {
     @apply text-light;
   }
 }
 .surface-att {
-  @apply bg-teal-400 text-neutral-700 dark:bg-orange-100;
+  @apply bg-blue-400 text-neutral-800 dark:bg-blue-500 dark:text-neutral-900;
   a:not([class]) {
     @apply text-light;
   }
