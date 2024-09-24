@@ -63,7 +63,7 @@ function getRandomInterval(min, max) {
 
 async function showRandomImage() {
     const imgElement = document.getElementById('item');
-    const randomImage = getRandomImage();
+    const randomImage = await getRandomImage();
 
     // Asegúrate de que 'item' tenga un contenido IMG
     if (!imgElement.querySelector('img')) {
@@ -71,7 +71,7 @@ async function showRandomImage() {
         imgElement.appendChild(img);
     }
         
-    const img = await imgElement.querySelector('img');
+    const img = imgElement.querySelector('img');
     img.classList.remove('show');  // Quitar clase para reiniciar la transición
     
     setTimeout(() => {
