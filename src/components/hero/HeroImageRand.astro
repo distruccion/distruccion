@@ -99,5 +99,10 @@ const { slug } = Astro.params;
       max-height: calc(100svh - 4rem);
     }
   }
+  @media only screen and (max-height: 350px) {
+  .hero {
+    min-height: 350px;
+  }
+  }
 
 </style>
