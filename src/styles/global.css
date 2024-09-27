@@ -284,13 +284,13 @@ body {
   }
 
   p {
-    @apply text-base tracking-wide dark:font-light;
+    @apply text-base tracking-wider dark:font-light;
   }
-  &:not(.no-lead) {
+  /* &:not(.no-lead) {
     p:first-of-type {
       @apply text-lg;
     }
-  }
+  } */
 
   * + *:is(h2, h3, h4, h5, h6) {
     @apply pt-8;

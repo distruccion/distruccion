@@ -22,6 +22,7 @@ const blocks = z
 			title: z.string().optional(),
 			thumbnail: z.string().optional(),
 			content: z.string().optional(),
+			caption: z.string().optional(),
 			block_class: z.string().optional(),
 			image_size: z.string().optional(),
 			image_opacity: z.string().optional(),

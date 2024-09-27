@@ -18,6 +18,7 @@ const {
   image_size,
   image_opacity,
   animate,
+  caption,
 } = Astro.props;
 
 const renderedContent = marked.parse(content);
@@ -83,6 +84,7 @@ const animation = `image_${animate ? imageName : Math.random()}`;
                     sizes={sizes}
                   />
                 </div>
+                <span class="text-xs font-thin italic"> {caption} </span>
                 <div class="absolute right-2 top-2 z-10 h-14 w-14 rounded-full bg-dark bg-opacity-40 text-white opacity-0 transition-all duration-1000 group-hover:opacity-100">
                   <Icon
                     name="zoom"
