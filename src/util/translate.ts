@@ -25,7 +25,7 @@ export const t = (field: string): string => {
     }
 
     if (translations['en'] && translations['en'][field]) {
-        return translations['en'][field];
+        return translations['es'][field];
     }
 
     return field;
