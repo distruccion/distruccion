@@ -49,6 +49,7 @@
 *{
 	margin: 0;
 	box-sizing: border-box;
+  /* @apply tracking-wide; */
 }
 
 /* SURFACES */
@@ -145,7 +146,7 @@ body {
   }
 }
 .surface-att {
-  @apply bg-teal-800 text-white dark:bg-teal-600 dark:text-white;
+  @apply bg-teal-700 text-white dark:bg-teal-800 dark:text-white;
   a:not([class]) {
     @apply text-light;
   }
@@ -159,8 +160,7 @@ body {
 }
 
 @font-face {
-  font-family: "Poppins";
-  /* src: local(Poppins); */
+  font-family: "Inter Variable";
   size-adjust: 105%;
   ascent-override: normal;
   descent-override: normal;
@@ -172,7 +172,7 @@ body {
   @screen xs {
     --spacing: 2rem;
   }
-  font-family: "Poppins", "arial",
+  font-family: "Inter Variable", "arial",
     sans-serif;
   --container-spacing: calc(var(--spacing) * 2);
   --grid-spacing: calc(var(--spacing) / 2);
@@ -284,7 +284,7 @@ body {
   }
 
   p {
-    @apply text-base tracking-wider dark:font-light;
+    @apply text-base tracking-wide dark:font-light;
   }
   /* &:not(.no-lead) {
     p:first-of-type {
@@ -401,7 +401,7 @@ body {
 /* BUTTONS */
 
 .btn {
-  @apply inline-flex gap-2 rounded-none px-4 py-2 uppercase outline-offset-4 transition-all duration-300 hover:-translate-y-0.5  hover:bg-opacity-90 hover:shadow-md disabled:pointer-events-none disabled:opacity-50 disabled:grayscale;
+  @apply inline-flex gap-2 rounded-none px-4 py-2 uppercase outline-offset-4 transition-all duration-300 hover:-translate-y-0.5  hover:bg-opacity-90 hover:shadow-md text-sm disabled:pointer-events-none disabled:opacity-50 disabled:grayscale;
 
   &-icon {
     @apply px-2;

@@ -23,9 +23,9 @@ module.exports = {
         'text-dark': '#454545',
       },
       fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-        body: ["Poppins", ...defaultTheme.fontFamily.sans],
-        poppins: ["Poppins", "sans"],
+        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        mono: ["Roboto Mono Variable", "monospace", ...defaultTheme.fontFamily.mono],
+        body: ["Inter Variable", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
         inset: " inset 2px 2px 40px -20px rgba(0, 0, 0, 0.3)",
