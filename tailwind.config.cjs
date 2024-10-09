@@ -24,7 +24,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
-        mono: ["Roboto Mono Variable", "monospace", ...defaultTheme.fontFamily.mono],
+        mono: ["Roboto Mono Variable", "monospace"],
         body: ["Inter Variable", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
