@@ -2,9 +2,9 @@
 
 ---
 
-<div class="media parallax h-full w-full" id="item" transition:persist><img class="" src=""></div>
+<div class="media parallax h-full w-full" id="item" ><img class="" src=""></div>
 
-<script>
+<script >
 
 const images = [
   'imgGrid/grid0.webp',
@@ -96,7 +96,8 @@ function showRandomImage() {
 }
 
 // Iniciar el proceso de mostrar imágenes aleatorias
-document.addEventListener('DOMContentLoaded', showRandomImage);
+// document.addEventListener('DOMContentLoaded', showRandomImage);
+document.addEventListener('astro:page-load', showRandomImage);
 
 </script>
 

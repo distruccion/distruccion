@@ -17,12 +17,11 @@ const isActive = (href) => {
 ---
 
 <header class="surface-menu nav sticky top-0 z-50" transition:name="nav">
-  <nav class="container-xl flex flex-nowrap items-stretch gap-6">
+  <nav class="container-xl flex flex-nowrap items-stretch gap-6" >
     <a
       href="/"
       aria-label={title}
       class="inline-block place-items-center py-3 text-primary"
-      data-astro-reload
     >
       <Icon name="logo" class="w-full min-w-28 h-11 dark:hidden z-10" />
       <Icon name="logoDark" class="w-full min-w-28 h-0 invisible dark:visible z-0 static dark:h-11" />
@@ -99,7 +98,7 @@ const isActive = (href) => {
                         : ""
                     }`}
                   >
-                    <a href={link.href} class={`block py-3 font-normal text-lg`}>
+                    <a href={link.href} class={`block py-3 font-normal text-lg`} >
                       {link.label}
                     </a>
                   </li>
