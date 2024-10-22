@@ -104,10 +104,10 @@ const filter = post.data?.tag
         <Content />
       </div>
       {post.data.features && (
-        <div class="pt-auto flex h-full max-w-md content-end py-8 ">
+        <div class="pt-auto flex h-full max-w-md content-end py-8">
           <div class="sticky bottom-8 self-end">
             {post.data.features.map((feature, index) => (
-              <div class=" flex justify-stretch gap-4">
+              <div class=" flex justify-stretch gap-4 ">
                 <div class="flex-0 sm:fex-1  min-w-[120px] font-bold">
                   {" "}
                   {feature.name}
