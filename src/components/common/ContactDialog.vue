@@ -132,7 +132,7 @@
                   type="submit"
                   :disabled="!canSubmit"
                 >
-                  {{ t("submit") }}
+                  {{ t("enviar") }}
                 </button>
               </div>
               <Loading :loading="loading" />
