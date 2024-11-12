@@ -411,6 +411,24 @@ body {
   }
 }
 
+.bgAni{
+  background: linear-gradient(-45deg, #3c3c9e, #7272df, #2196c0, #105e61);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+	/* height: 100vh; */
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 a.link-underline {
   padding-bottom: 0.1em;
   background: linear-gradient(90deg, currentColor, currentColor) no-repeat right
