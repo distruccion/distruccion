@@ -1,0 +1,65 @@
+---
+---
+
+<style>
+  .summary-container {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* line-height: 1.5rem;  */
+  }
+
+  .clamped {
+    /* -webkit-line-clamp: 2; */
+    max-height: calc(1.6rem * 5); 
+  }
+
+  .expanded {
+    -webkit-line-clamp: unset;
+    max-height: 600px
+  }
+
+  .fade-out {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-left: 1rem;
+    background: linear-gradient(to right, transparent, #bbb 30%);
+  }
+
+  .toggle-btn {
+    color: #616cd8;
+    cursor: pointer;
+    font-weight: 500;
+  }
+</style>
+
+<div class="summary-wrapper">
+  <div class="summary-container clamped">
+    <slot />
+    <span class="fade-out">
+      <span class="toggle-btn">... Leer más</span>
+    </span>
+  </div>
+</div>
+
+<script is:client>
+  document.querySelectorAll(".summary-wrapper").forEach(wrapper => {
+    const summary = wrapper.querySelector(".summary-container");
+    const toggleBtn = wrapper.querySelector(".toggle-btn");
+
+    let expanded = false;
+
+    toggleBtn.addEventListener("click", () => {
+      expanded = !expanded;
+      summary.classList.toggle("expanded", expanded);
+      summary.classList.toggle("clamped", !expanded);
+      toggleBtn.textContent = expanded ? " Leer menos" : "... Leer más";
+      // Ocultar el fondo degradado cuando está expandido
+      toggleBtn.parentElement.style.background = expanded ? "none" : "linear-gradient(to right, transparent, #bbb 30%)";
+    });
+  });
+</script>
+

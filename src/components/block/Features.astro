@@ -3,6 +3,7 @@ import { marked } from "marked";
 import Intersecting from "@components/common/Intersecting.vue";
 import { Icon } from "astro-icon/components";
 import { getIconName } from "@util/helpers";
+import SummaryText from "@components/SummaryText.astro";
 const { content, container, features } = Astro.props;
 ---
 
@@ -17,22 +18,24 @@ const { content, container, features } = Astro.props;
         <ul class="features my-10 flex flex-wrap justify-center gap-4 ">
           {features.map((feature, index) => (
             <li
-              class={`features__item fade-up flex flex-1 flex-col items-center rounded-md text-center`}
+              class={`features__item fade-up flex flex-1 flex-col items-center rounded-md text-center  mb-6`}
               style={`--animation-delay: ${(index + 1) * 150}ms`}
             >
               {feature.icon && (
                 <div
                   class={`${
                     feature.color || "surface-primary"
-                  } grid h-20 w-20 place-items-center overflow-hidden rounded-full`}
+                  } grid h-20 w-20 place-items-center overflow-hidden rounded-full -mb-2`}
                 >
                   <Icon name={getIconName(feature.icon)} class={`h-8 w-8 `} />
                 </div>
               )}
+              <SummaryText>
               <div
                 set:html={marked.parse(feature.content)}
                 class="richtext no-lead px-4 py-8 text-neutral-600 dark:text-stone-200"
               />
+              </SummaryText>
             </li>
           ))}
         </ul>
