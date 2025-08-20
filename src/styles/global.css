@@ -64,7 +64,11 @@ body {
 }
 
 .surface-base {
-  @apply bg-stone-200 text-gray-700 dark:bg-dark dark:text-gray-300;
+  @apply bg-stone-200 text-neutral-600 dark:bg-dark dark:text-neutral-300;
+}
+
+.surface-invert {
+  @apply dark:bg-stone-300 dark:text-neutral-600 bg-neutral-900 text-neutral-300;
 }
 
 .surface-primary {
@@ -117,7 +121,7 @@ body {
 }
 
 .surface-menu {
-  @apply bg-light bg-opacity-90 text-primary  dark:bg-neutral-800 dark:bg-opacity-90;
+  @apply bg-light bg-opacity-90 text-accent  dark:bg-neutral-800 dark:bg-opacity-95;
   .nav-links {
     @apply text-dark dark:text-stone-100;
   }

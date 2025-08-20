@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <style>
@@ -26,7 +27,7 @@
     right: 0;
     bottom: 0;
     padding-left: 1rem;
-    background: linear-gradient(to right, transparent, #bbb 30%);
+    /* background: linear-gradient(to right, transparent, #bbb 30%); */
   }
 
   .toggle-btn {
@@ -39,7 +40,7 @@
 <div class="summary-wrapper">
   <div class="summary-container clamped">
     <slot />
-    <span class="fade-out">
+    <span class="fade-out bg-neutral-300 dark:bg-neutral-800">
       <span class="toggle-btn">... Leer más</span>
     </span>
   </div>
@@ -58,7 +59,7 @@
       summary.classList.toggle("clamped", !expanded);
       toggleBtn.textContent = expanded ? " Leer menos" : "... Leer más";
       // Ocultar el fondo degradado cuando está expandido
-      toggleBtn.parentElement.style.background = expanded ? "none" : "linear-gradient(to right, transparent, #bbb 30%)";
+      toggleBtn.parentElement.style.background = expanded ? "none" : "linear-gradient(to right, transparent, #aaa 30%)";
     });
   });
 </script>
