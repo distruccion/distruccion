@@ -121,7 +121,7 @@ document.addEventListener('astro:page-load', showRandomImage);
   @media screen and (max-width: 1550px) {
   #item {
       margin-top: -100px;
-      width: 105%;
+      width: 140%;
   }
   }
   @media screen and (max-width: 1450px) {
@@ -131,19 +131,19 @@ document.addEventListener('astro:page-load', showRandomImage);
   }
   @media screen and (max-width: 993px) {
   #item {
-      width: calc(100svh - 4rem);
-      height: auto;
+      height: calc(100svh - 4rem);
       min-height: calc(100svh - 4rem);
       margin-top: 0px;
+      width: 170%;
   }
-  @media screen and (min-width: 450px) {
+  }
+  @media screen and (max-width: 450px) {
   #item {
-      width: 1080px;
-      height: auto;
+      width: 280%;
+      height: calc(100svh - 4rem);
       max-height: calc(100svh - 4rem);
       margin-top: 0px;
       margin-left: -100px;
-  }
   }
   }
 </style>
