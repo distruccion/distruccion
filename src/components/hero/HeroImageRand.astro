@@ -22,20 +22,19 @@ const { slug } = Astro.params;
 ---
 
 <div
-  class={`hero relative overflow-hidden nebulix-parallax ${
+  class={`hero relative overflow-hidden nebulix-parallax bg-[url(/src/assets/bgPatternDC1.webp)] bg-[auto_350px] ${
     style.hero_surface || "surface-dark"
   } ${style.hero_class || ""}`}
   transition:name={`hero_${slug || Math.random()}`}
   id="header"
-  style="background-image: url('bkgIndex.webp');"
 >
   <RandImage/>
 
   <div
-    class="absolute inset-0 z-10 grid place-items-center bg-dark bg-opacity-20"
+    class="absolute inset-0 z-10 grid place-items-center bg-dark bg-opacity-20 "
   >
-    <div class="container-xl py-8">
-      <div class="max-w-3xl">
+    <div class="container-xl py-8 ">
+      <div class="max-w-3xl ">
         {
           pubDate && (
             <span class="text-overline">
@@ -43,12 +42,12 @@ const { slug } = Astro.params;
             </span>
           )
         }
-        <h1 class="title">
+        <h1 class="title ">
           {title}
         </h1>
-        <div class="flex-col">
-          {description && <div class=" balance py2 font-light font-mono tracking-tight"> {description}</div>}
-          {intro && <div class="subtitle balance py2 text-indigo-200 mt-8 font-extrabold"> {intro}</div>}
+        <div class="flex-col ">
+          {description && <div class=" balance py2 font-mono tracking-tight"> {description}</div>}
+          {intro && <div class="subtitle balance py2 text-indigo-100 mt-8 font-extrabold"> {intro}</div>}
         </div>
 
         {

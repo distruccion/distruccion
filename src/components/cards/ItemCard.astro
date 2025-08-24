@@ -15,14 +15,14 @@ const animation = `hero_${animate ? content.slug : Math.random()}`;
   transition:name={`${animation}`}
 >
   <div
-    class="group-over:ease-out group-over:opacity-100 relative z-10 opacity-90 transition-all duration-1000 ease-in group-hover:scale-125 group-hover:opacity-50 group-hover:duration-[6s]"
+    class="group-over:ease-out group-over:opacity-100 relative z-10 opacity-90 transition-all duration-1000 ease-in group-hover:scale-125 group-hover:opacity-50 group-hover:duration-[3s] "
   >
     {
       content.data.thumbnail && (
         <Picture
           attributes={{
             picture: {
-              class: "fade-in",
+              class: "fade-in ",
             },
           }}
           sizes={sizes ? sizes : "100vw"}
@@ -39,7 +39,7 @@ const animation = `hero_${animate ? content.slug : Math.random()}`;
   </div>
 
   <div class="blog-card__content absolute inset-0 z-10 grid place-items-center">
-    <div class="relative w-full p-8">
+    <div class="relative w-full p-8 bg-[url(/src/assets/bgT2.png)]">
       {
         content.data.pubDate && (
           <span class="text-overline text-xs">
@@ -90,7 +90,7 @@ const animation = `hero_${animate ? content.slug : Math.random()}`;
     &__content {
       background: radial-gradient(
         circle,
-        rgba(0, 0, 0, 0.6) 25%,
+        rgba(0, 0, 0, 0.3) 25%,
         rgba(0, 0, 0, 0) 90%
       );
     }

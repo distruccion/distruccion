@@ -55,7 +55,7 @@ const animation = `image_${animate ? imageName : Math.random()}`;
   <div
     class={`container-${container} ${columnClass()} text-image gap-8 text-image__${template} ${
       reverse ? "reverse" : "normal"
-    } ${template === "banner" ? "nebulix-parallax bg-dark" : ""}`}
+    } ${template === "banner" ? "nebulix-parallax bg-light" : ""}`}
   >
     <div class="media">
       {
@@ -102,7 +102,7 @@ const animation = `image_${animate ? imageName : Math.random()}`;
                 src={thumbnail}
                 width={1920}
                 height={900}
-                ar={2.25}
+                ar={1}
                 alt={title}
                 layout="fill"
                 breakpoints={[1000, 1280, 1440, 1536, 1920]}
@@ -192,9 +192,9 @@ const animation = `image_${animate ? imageName : Math.random()}`;
 				@apply absolute inset-0 pointer-events-none;
 			}
             .text-image__content {
-                @apply relative z-10 w-full h-full  grid place-items-center py-20 bg-dark bg-opacity-30;
+                @apply relative z-10 w-full h-full  grid place-items-center py-20 bg-neutral-700 bg-opacity-10;
                 .richtext {
-                    @apply p-8 text-white max-w-2xl text-center;
+                    @apply p-8 text-light max-w-2xl text-center;
                 }
                 
             }
