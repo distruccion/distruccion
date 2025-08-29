@@ -63,7 +63,7 @@ const animation = `image_${animate ? imageName : Math.random()}`;
           <>
             {template !== "banner" && (
               <a
-                class={`img text-lightgroup group relative block overflow-hidden ${roundedClass}`}
+                class={`img text-light group relative block overflow-hidden ${roundedClass}`}
                 href={`/images/${imageName}`}
                 transition:name={`${animation}`}
                 aria-label={t("enlarge_image")}
@@ -192,7 +192,7 @@ const animation = `image_${animate ? imageName : Math.random()}`;
 				@apply absolute inset-0 pointer-events-none;
 			}
             .text-image__content {
-                @apply relative z-10 w-full h-full  grid place-items-center py-20 bg-neutral-700 bg-opacity-10;
+                @apply relative z-10 w-full h-full  grid place-items-center py-20 bg-neutral-500 bg-opacity-10;
                 .richtext {
                     @apply p-8 text-light max-w-2xl text-center;
                 }

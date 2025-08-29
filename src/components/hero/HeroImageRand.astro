@@ -42,11 +42,11 @@ const { slug } = Astro.params;
             </span>
           )
         }
-        <h1 class="title ">
+        <h1 class="title shadowtit">
           {title}
         </h1>
-        <div class="flex-col ">
-          {description && <div class=" balance py2 font-mono tracking-tight"> {description}</div>}
+        <div class="flex-col">
+          {description && <div class="balance py2 font-mono tracking-tight"> {description}</div>}
           {intro && <div class="subtitle balance py2 text-indigo-100 mt-8 font-extrabold"> {intro}</div>}
         </div>
 
@@ -103,6 +103,9 @@ const { slug } = Astro.params;
   .hero {
     min-height: calc(100svh - 4rem);
   }
+  }
+  .shadowtit {
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.3);
   }
 
 </style>

@@ -71,7 +71,7 @@ const hasBlocks = blocks && blocks.length > 0;
         <div
           class="page-split__title absolute inset-0 z-10 grid place-items-center"
         >
-          <div class="w-full bg-[url(/src/assets/bgT2.png)] p-2">
+          <div class="w-full p-2 bg-[url(/src/assets/bgT2.png)] bg-[auto_350px]">
             {
               pubDate && (
                 <span class="text-overline">
@@ -82,7 +82,7 @@ const hasBlocks = blocks && blocks.length > 0;
             <h1 class="title">
               {title}
             </h1>
-            {intro && <div class="balance font-mono font-light tracking-tight"> {intro}</div>}
+            {intro && <div class="balance font-mono font-light tracking-tight "> {intro}</div>}
 
             {
               hero_buttons && hero_buttons.length > 0 && (
