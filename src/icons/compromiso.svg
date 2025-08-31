@@ -7,7 +7,7 @@
    viewBox="0 0 132.29167 132.29167"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    sodipodi:docname="compromiso.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,9 +25,9 @@
      inkscape:document-units="px"
      showgrid="true"
      showguides="true"
-     inkscape:zoom="0.18106587"
-     inkscape:cx="-102.17276"
-     inkscape:cy="566.09234"
+     inkscape:zoom="0.36213174"
+     inkscape:cx="418.35604"
+     inkscape:cy="454.25458"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -54,6 +54,23 @@
   </sodipodi:namedview>
   <defs
      id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,2.983221,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,3.0194932,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
     <inkscape:path-effect
        effect="tiling"
        id="path-effect11"
@@ -126,14 +143,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:5.29167;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 39.687498,66.14583 79.374996,26.458332 92.604162,13.229166 119.06249,39.687498 V 66.14583 L 105.83333,79.374996 79.374996,52.916664 52.916664,79.374996 Z"
-       id="path18"
-       sodipodi:nodetypes="ccccccccc" />
-    <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.29167;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 13.229166,39.687498 H 66.14583 L 52.916664,52.916664 66.14583,66.14583 79.374996,52.916664 119.06249,92.604162 105.83333,105.83333 79.374996,79.374996 105.83333,105.83333 92.604162,119.06249 66.14583,92.604162 l 13.229166,13.229168 -26.458332,0 L 39.687498,92.604162 H 13.229166 Z"
-       id="path19"
-       sodipodi:nodetypes="cccccccccccccccc" />
+       id="path1"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:14.4377;stroke-linejoin:round;stroke-opacity:1"
+       d="M 66.145831 0 A 66.145828 66.145828 0 0 0 5.6978432 39.288557 L 20.843688 41.695128 L 46.228701 40.91223 L 66.200091 25.680602 L 98.749008 8.5932736 A 66.145828 66.145828 0 0 0 66.145831 0 z M 123.12995 32.558735 L 110.72605 40.953054 L 106.70769 59.519362 L 98.191419 75.026942 L 110.99632 87.900575 A 2.910706 2.910706 0 0 1 111.33584 91.593889 L 102.55446 104.45305 A 2.910706 2.910706 0 0 1 101.10752 107.99599 L 86.773512 113.08767 A 2.910706 2.910706 0 0 1 84.007789 112.6386 L 78.603468 108.41973 L 55.083974 110.35553 A 2.910706 2.910706 0 0 1 52.882558 109.60571 L 36.771398 94.89653 L 4.5433918 90.238416 A 66.145828 66.145828 0 0 0 66.145831 132.29166 A 66.145828 66.145828 0 0 0 132.29166 66.145831 A 66.145828 66.145828 0 0 0 123.12995 32.558735 z M 3.5367349 44.807083 A 66.145828 66.145828 0 0 0 0 66.145831 A 66.145828 66.145828 0 0 0 2.475301 84.070834 A 2.9104149 2.9104149 0 0 1 2.7579711 84.097706 L 38.490156 89.263799 A 2.910706 2.910706 0 0 1 40.035281 89.993987 L 55.871006 104.45099 L 71.675726 103.15029 L 60.693451 94.43971 L 60.675881 94.425758 A 2.9111227 2.9111227 0 0 1 64.275144 89.84981 L 64.292714 89.863245 L 64.296848 89.86738 L 86.330128 107.0684 L 94.72238 104.0877 L 72.636907 82.00171 L 72.630706 81.996026 A 2.910706 2.910706 0 0 1 76.742083 77.87483 L 76.747767 77.881032 L 98.722653 99.744296 L 105.17187 90.298878 L 75.057948 60.023724 L 46.933568 79.520725 A 3.6765594 3.6765594 0 0 1 42.282172 79.14142 L 39.742792 76.684205 A 3.2219385 3.2219385 0 0 1 39.502497 72.312896 L 61.083091 46.276243 L 20.748087 47.523196 A 2.910706 2.910706 0 0 1 20.2029 47.488056 L 3.9511799 44.904234 A 2.9104149 2.9104149 0 0 1 3.5367349 44.807083 z " />
   </g>
 </svg>

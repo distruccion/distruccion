@@ -25,9 +25,9 @@ const { content, container, features } = Astro.props;
                 <div
                   class={`${
                     feature.color || "surface-primary"
-                  } grid h-20 w-20 place-items-center overflow-hidden rounded-full -mb-2`}
+                  } grid h-16 w-16 place-items-center overflow-hidden rounded-full -mb-4 inner`}
                 >
-                  <Icon name={getIconName(feature.icon)} class={`h-8 w-8 `} />
+                  <Icon name={getIconName(feature.icon)} class={`h-16 w-16 `} />
                 </div>
               )}
               <SummaryText>

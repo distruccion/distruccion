@@ -157,7 +157,7 @@ body {
 }
 
 .surface-fticons {
-  @apply bg-stone-200 text-stone-500 dark:text-stone-400 dark:bg-[#282828];
+  @apply bg-[#b9b9b9] bg-[url(/src/assets/bgT2.png)] bg-[auto_440px] text-stone-200 dark:text-[#202020] dark:bg-[#333];
   a:not([class]) {
     @apply text-light;
   }

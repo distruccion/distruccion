@@ -7,13 +7,13 @@
    viewBox="0 0 132.29167 132.29167"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
    sodipodi:docname="seguimiento.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
      bordercolor="#000000"
@@ -24,17 +24,16 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     showguides="true"
-     inkscape:zoom="0.36213173"
-     inkscape:cx="532.95524"
-     inkscape:cy="186.39626"
+     showguides="false"
+     inkscape:zoom="0.5121316"
+     inkscape:cx="102.51271"
+     inkscape:cy="176.71239"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="1192"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <inkscape:grid
+     inkscape:current-layer="layer1"><inkscape:grid
        type="axonomgrid"
        id="grid1"
        units="px"
@@ -50,11 +49,12 @@
        dotted="false"
        gridanglex="45"
        gridanglez="45"
-       visible="true" />
-  </sodipodi:namedview>
-  <defs
-     id="defs1">
-    <inkscape:path-effect
+       visible="true" /><sodipodi:guide
+       position="132.29166,66.145831"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" /></sodipodi:namedview><defs
+     id="defs1"><inkscape:path-effect
        effect="tiling"
        id="path-effect11"
        is_visible="true"
@@ -86,8 +86,7 @@
        random_rotate="false"
        random_gap_y="false"
        random_gap_x="false"
-       transformorigin="" />
-    <inkscape:path-effect
+       transformorigin="" /><inkscape:path-effect
        effect="tiling"
        id="path-effect8"
        is_visible="true"
@@ -119,15 +118,10 @@
        random_rotate="false"
        random_gap_y="false"
        random_gap_x="false"
-       transformorigin="" />
-  </defs>
-  <g
+       transformorigin="" /></defs><g
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       id="path29"
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.29167;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 79.374996,66.14583 26.458336,13.229166 v 13.229166 l 39.6875,39.687498 -39.6875,39.6875 v 13.22916 z m 26.458334,0 -52.916662,-52.916664 v 13.229166 l 39.6875,39.687498 -46.302083,46.30208 6.614583,6.61458 z m 26.45833,0 L 79.375,13.229166 72.760417,19.843749 119.0625,66.14583 79.375,105.83333 v 13.22916 z" />
-  </g>
-</svg>
+     id="layer1"><path
+       id="path1"
+       style="fill:#000000;stroke:none;stroke-width:8.51681;stroke-linejoin:round"
+       d="M 66.145831 0 A 66.145828 66.145828 0 0 0 0.37672118 59.096649 L 87.293893 59.096649 L 62.616331 34.419603 L 67.62171 29.414224 L 100.82847 62.620982 L 67.62171 95.827739 L 62.616331 90.822877 L 87.293893 66.145831 L 0 66.145831 A 66.145828 66.145828 0 0 0 66.145831 132.29166 A 66.145828 66.145828 0 0 0 132.29166 66.145831 A 66.145828 66.145828 0 0 0 66.145831 0 z " /></g></svg>
